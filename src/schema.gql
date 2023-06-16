@@ -1,0 +1,32 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserOutput {
+  id: Int!
+  name: String!
+  lastname: String
+  date: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  helloWorld1: String!
+  helloWorld2(name: String!): String!
+  helloWorld3(name: String!, lastname: String): String!
+  helloWorld4: UserOutput!
+}
+
+type Mutation {
+  helloWorld5(data: ExampleInput!): UserOutput!
+  helloWorld6(data: ExampleInput!): UserOutput!
+}
+
+input ExampleInput {
+  id: Int!
+  name: String!
+}
